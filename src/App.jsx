@@ -16,6 +16,8 @@ function App() {
             <Route path="/:slug" element={<DetailAnime />} />
             <Route path="/:slug/:epsid" element={<StreamAnime />} />
             <Route path="/search" element={<AnimeSearch />} />
+            <Route path="*" element={<p>404 Not Found</p>} />{" "}
+            {/* Rute fallback */}
           </Routes>
         </div>
       </Router>
