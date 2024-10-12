@@ -16,9 +16,14 @@ const Navibar = () => {
   return (
     <>
       <nav className="flex justify-between items-center">
-        <Link to="/" className="md:text-2xl font-bold flex items-center">
-          <Winds size={28} className="mr-4" /> StreamAnime
-        </Link>
+        <div>
+          <Link to="/" className="md:text-2xl font-bold flex items-center">
+            <Winds size={28} className="mr-4" /> StreamAnime
+          </Link>
+          <p className="text-sm hidden md:block">
+            Website streaming & download anime sub indo
+          </p>
+        </div>
         <div className="flex items-center space-x-3 mt-1 md:mt-0">
           <form onSubmit={handleSearch} className="flex items-center">
             <input

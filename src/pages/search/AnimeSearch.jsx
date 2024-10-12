@@ -1,4 +1,4 @@
-import { useLocation } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { useEffect, useState } from "react";
 import axios from "axios";
 
@@ -48,12 +48,12 @@ const AnimeSearch = () => {
                   height={100}
                 />
                 <div>
-                  <a
-                    href={`/${anime.slug}`}
+                  <Link
+                    to={`/${anime.slug}`}
                     className="text-blue-500 underline"
                   >
                     {anime.title}
-                  </a>
+                  </Link>
                   <p>Status: {anime.status}</p>
                   <p className="mb-6">Rating: {anime.rating}</p>
                   {anime.genres

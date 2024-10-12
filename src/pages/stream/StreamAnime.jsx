@@ -47,8 +47,8 @@ const StreamAnime = () => {
               <iframe
                 src={stream.stream_url}
                 frameborder="0"
-                allowfullscreen
-                sandbox="allow-same-origin allow-scripts allow-popups allow-top-navigation-by-user-activation allow-forms allow-modals allow-presentation"
+                allow="fullscreen" // Tambahkan ini untuk mengizinkan fullscreen
+                sandbox="allow-same-origin allow-scripts"
                 className="w-full md:h-[600px]"
               ></iframe>
             </div>
@@ -72,7 +72,7 @@ const StreamAnime = () => {
             </div>
             <div className="w-full">
               <h1 className="text-center py-2 mt-4 bg-green-500 bg-opacity-50 ">
-                Download
+                Download Eps
               </h1>
               <ul className="items-center justify-center mt-3">
                 {stream.download_urls.map((download, index) => (
