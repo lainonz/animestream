@@ -6,6 +6,8 @@ import StreamAnime from "./pages/stream/StreamAnime";
 import AnimeSearch from "./pages/search/AnimeSearch";
 import JadwalAnime from "./pages/jadwal/JadwalAnime";
 import Footar from "./components/Footar";
+import ListAnime from "./pages/listanime/ListAnime";
+// import Genre from "./pages/genre/Genre";
 
 function App() {
   return (
@@ -19,6 +21,8 @@ function App() {
             <Route path="/:slug/:epsid" element={<StreamAnime />} />
             <Route path="/search" element={<AnimeSearch />} />
             <Route path="/jadwal" element={<JadwalAnime />} />
+            <Route path="/listanime" element={<ListAnime />} />
+            {/* <Route path="/genre" element={<Genre />} /> */}
             <Route path="*" element={<p>404 Not Found</p>} />{" "}
             {/* Rute fallback */}
           </Routes>

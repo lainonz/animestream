@@ -37,15 +37,12 @@ const AnimeSearch = () => {
         {searchResults.length > 0 ? (
           <ul className="mt-4 space-y-3">
             {searchResults.map((anime, index) => (
-              <li
-                key={index}
-                className="border border-gray-600 p-2 rounded flex space-x-3"
-              >
+              <li key={index} className="py-2 flex space-x-3">
                 <img
                   src={anime.thumbnail}
                   alt={anime.title}
                   width={150}
-                  height={100}
+                  height={70}
                 />
                 <div>
                   <Link

@@ -73,13 +73,23 @@ const Home = () => {
   return (
     <>
       <div className="container mx-auto p-4">
-        <div className="my-6">
-          <Link
-            to="/jadwal"
-            className="bg-blue-500 bg-opacity-500 px-4 py-2 rounded-md shadow-md"
-          >
-            Jadwal Anime
-          </Link>
+        <div className="flex items-center space-x-3 my-6">
+          <div>
+            <Link
+              to="/jadwal"
+              className="bg-blue-500 bg-opacity-70 px-4 py-2 rounded-md shadow-md"
+            >
+              Jadwal Anime
+            </Link>
+          </div>
+          <div>
+            <Link
+              to="/listanime"
+              className="bg-blue-500 bg-opacity-70 px-4 py-2 rounded-md shadow-md"
+            >
+              List Anime
+            </Link>
+          </div>
         </div>
         {/* Ongoing Anime Accordion */}
         <div className="mb-6">
