@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom"; // Import Link
+import { Star } from "@mynaui/icons-react";
 
 const Home = () => {
   const [animeData, setAnime] = useState(null);
@@ -48,7 +49,6 @@ const Home = () => {
         to={anime.slug}
         key={anime.slug}
         className="w-32 mx-auto md:w-44 h-full rounded-md"
-        href={anime.slug}
       >
         <div className="relative">
           <img
@@ -60,11 +60,20 @@ const Home = () => {
             {anime.title}
           </h3>
           <p className="absolute text-sm top-0 px-1 bg-[#212121] bg-opacity-70">
-            {anime.current_episode}
+            {anime.current_episode || anime.total_episode}{" "}
+            {/* Tampilkan current_episode atau total_episode */}
           </p>
           <p className="absolute top-0 right-0 px-1 text-sm bg-[#212121] bg-opacity-70">
             {anime.release_day}
           </p>
+          {anime.rating && (
+            <div className="absolute top-0 right-0 bg-[#212121] bg-opacity-70 flex items-center">
+              <span className="text-yellow-400 flex">
+                <Star className="h-4 w-4" />
+              </span>
+              <span className="ml-1 text-white text-xs">{anime.rating}</span>
+            </div>
+          )}
         </div>
       </Link>
     );
