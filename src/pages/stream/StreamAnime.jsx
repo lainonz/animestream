@@ -49,7 +49,7 @@ const StreamAnime = () => {
                 frameborder="0"
                 allow="fullscreen" // Tambahkan ini untuk mengizinkan fullscreen
                 sandbox="allow-same-origin allow-scripts"
-                className="w-full md:h-[600px]"
+                className="w-full h-[300px]  md:h-[600px]"
               ></iframe>
             </div>
             <div className="flex mt-3 justify-between gap-2">
